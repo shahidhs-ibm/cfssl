@@ -29,6 +29,19 @@ builds:
       - -linkmode external -extldflags "-static"
     env:
       - CC=/usr/bin/musl-gcc
+  - id: cfssl-linux-s390x
+    binary: cfssl
+    goos:
+      - linux
+    goarch:
+      - s390x
+    main: ./cmd/cfssl
+    ldflags:
+      - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
+      - -linkmode external -extldflags "-static"
+    env:
+      - CC=/usr/bin/s390x-linux-gnu-gcc
+      - CGO_ENABLED=0
   - id: cfssl-windows
     binary: cfssl
     env:
@@ -65,6 +78,19 @@ builds:
       - -linkmode external -extldflags "-static"
     env:
       - CC=/usr/bin/musl-gcc
+  - id: cfssl-bundle-linux-s390x
+    binary: cfssl-bundle
+    goos:
+      - linux
+    goarch:
+      - s390x
+    main: ./cmd/cfssl-bundle
+    ldflags:
+      - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
+      - -linkmode external -extldflags "-static"
+    env:
+      - CC=/usr/bin/s390x-linux-gnu-gcc
+      - CGO_ENABLED=0
   - id: cfssl-bundle-windows
     binary: cfssl-bundle
     env:
@@ -101,6 +127,19 @@ builds:
       - -linkmode external -extldflags "-static"
     env:
       - CC=/usr/bin/musl-gcc
+  - id: cfssl-certinfo-linux-s390x
+    binary: cfssl-certinfo
+    goos:
+      - linux
+    goarch:
+      - s390x
+    main: ./cmd/cfssl-certinfo
+    ldflags:
+      - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
+      - -linkmode external -extldflags "-static"
+    env:
+      - CC=/usr/bin/s390x-linux-gnu-gcc
+      - CGO_ENABLED=0
   - id: cfssl-certinfo-windows
     binary: cfssl-certinfo
     env:
@@ -137,6 +176,19 @@ builds:
       - -linkmode external -extldflags "-static"
     env:
       - CC=/usr/bin/musl-gcc
+  - id: cfssl-newkey-linux-s390x
+    binary: cfssl-newkey
+    goos:
+      - linux
+    goarch:
+      - s390x
+    main: ./cmd/cfssl-newkey
+    ldflags:
+      - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
+      - -linkmode external -extldflags "-static"
+    env:
+      - CC=/usr/bin/s390x-linux-gnu-gcc
+      - CGO_ENABLED=0
   - id: cfssl-newkey-windows
     binary: cfssl-newkey
     env:
@@ -173,6 +225,19 @@ builds:
       - -linkmode external -extldflags "-static"
     env:
       - CC=/usr/bin/musl-gcc
+  - id: cfssl-scan-linux-s390x
+    binary: cfssl-scan
+    goos:
+      - linux
+    goarch:
+      - s390x
+    main: ./cmd/cfssl-scan
+    ldflags:
+      - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
+      - -linkmode external -extldflags "-static"
+    env:
+      - CC=/usr/bin/s390x-linux-gnu-gcc
+      - CGO_ENABLED=0
   - id: cfssl-scan-windows
     binary: cfssl-scan
     env:
@@ -209,6 +274,19 @@ builds:
       - -linkmode external -extldflags "-static"
     env:
       - CC=/usr/bin/musl-gcc
+  - id: cfssljson-linux-s390x
+    binary: cfssljson
+    goos:
+      - linux
+    goarch:
+      - s390x
+    main: ./cmd/cfssljson
+    ldflags:
+      - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
+      - -linkmode external -extldflags "-static"
+    env:
+      - CC=/usr/bin/s390x-linux-gnu-gcc
+      - CGO_ENABLED=0
   - id: cfssljson-windows
     binary: cfssljson
     env:
@@ -245,6 +323,19 @@ builds:
       - -linkmode external -extldflags "-static"
     env:
       - CC=/usr/bin/musl-gcc
+  - id: mkbundle-linux-s390x
+    binary: mkbundle
+    goos:
+      - linux
+    goarch:
+      - s390x
+    main: ./cmd/mkbundle
+    ldflags:
+      - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
+      - -linkmode external -extldflags "-static"
+    env:
+      - CC=/usr/bin/s390x-linux-gnu-gcc
+      - CGO_ENABLED=0
   - id: mkbundle-windows
     binary: mkbundle
     env:
@@ -281,6 +372,19 @@ builds:
       - -linkmode external -extldflags "-static"
     env:
       - CC=/usr/bin/musl-gcc
+  - id: multirootca-linux-s390x
+    binary: multirootca
+    goos:
+      - linux
+    goarch:
+      - s390x
+    main: ./cmd/multirootca
+    ldflags:
+      - -s -w -X github.com/cloudflare/cfssl/cli/version.version={{.Version}}
+      - -linkmode external -extldflags "-static"
+    env:
+      - CC=/usr/bin/s390x-linux-gnu-gcc
+      - CGO_ENABLED=0
   - id: multirootca-windows
     binary: multirootca
     env:

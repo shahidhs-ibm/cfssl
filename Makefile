@@ -48,7 +48,7 @@ __check_defined = \
 
 .PHONY: snapshot
 snapshot:
-	docker run --rm  -v $(PWD):/workdir -w /workdir cbroglie/goreleaser-cgo:1.12.12-musl goreleaser --rm-dist --snapshot --skip-publish
+	docker run --rm  -v $(PWD):/workdir -w /workdir ghcr.io/gythialy/golang-cross:v1.18 --rm-dist --snapshot --skip-publish
 
 .PHONY: github-release
 github-release:
