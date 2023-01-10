@@ -7,7 +7,7 @@ COPY . /workdir
 
 RUN git clone https://github.com/cloudflare/cfssl_trust.git /etc/cfssl && \
     make clean && \
-    make all && cp bin/* /usr/bin/
+    GOOS=${TARGETOS} GOARCH=${TARGETARCH} make all && cp bin/* /usr/bin/
 
 EXPOSE 8888
 
