@@ -41,4 +41,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64,linux/s390x
           push: true
-          tags: shahid1984/cfssl:${{ steps.cfssl.outputs.tag }}
+          tags: ${{ steps.cfssl.outputs.tag }}
