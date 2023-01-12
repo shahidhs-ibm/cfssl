@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
 
       - name: Get tag
-        id: repository
+        id: cfssl
         run: echo  "::set-output name=tag::$(git describe --tags HEAD)"
 
       - name: Set up QEMU
